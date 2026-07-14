@@ -5,21 +5,21 @@
 class Tether < Formula
   desc "Open URLs requested on a headless server in a browser on your desktop, over SSH."
   homepage "https://github.com/mwdomino/tether"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mwdomino/tether/releases/download/v0.5.0/tether_0.5.0_darwin_amd64.tar.gz"
-      sha256 "957f875bcddca1c4480a7b9af9a093f0382bf61753db551772b0b6ae1b657a08"
+      url "https://github.com/mwdomino/tether/releases/download/v0.5.1/tether_0.5.1_darwin_amd64.tar.gz"
+      sha256 "835e7cfd592b3cd533a6cc3e4022461fef40dd1ca5c1eb5a5f12457177e044c9"
 
       define_method(:install) do
         bin.install "tether"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mwdomino/tether/releases/download/v0.5.0/tether_0.5.0_darwin_arm64.tar.gz"
-      sha256 "bf000e3ccfe2d70d649db818dee16709299c1214db0da224ce27b1359f07188e"
+      url "https://github.com/mwdomino/tether/releases/download/v0.5.1/tether_0.5.1_darwin_arm64.tar.gz"
+      sha256 "bd4c3f9e6b68ac2f55179c92491d040c008b2d760076e10d46d7fc84008abc4d"
 
       define_method(:install) do
         bin.install "tether"
@@ -29,15 +29,15 @@ class Tether < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mwdomino/tether/releases/download/v0.5.0/tether_0.5.0_linux_amd64.tar.gz"
-      sha256 "991b2cdffc25ae2e1014b45478ebc9ac1366c78ab7f30c11e340c86e2686ad4e"
+      url "https://github.com/mwdomino/tether/releases/download/v0.5.1/tether_0.5.1_linux_amd64.tar.gz"
+      sha256 "7f9a672d8cd1b2ae62085d3d918692101edce6bc2721b568149504f6889fdec7"
       define_method(:install) do
         bin.install "tether"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mwdomino/tether/releases/download/v0.5.0/tether_0.5.0_linux_arm64.tar.gz"
-      sha256 "6bd5b2c2089687aa0779ce74fb3d0bb4fdda581fccb9121047c88c797419a1b4"
+      url "https://github.com/mwdomino/tether/releases/download/v0.5.1/tether_0.5.1_linux_arm64.tar.gz"
+      sha256 "3b41de3223e8b1dc3b66d1995e5ad92fbb0f375cef7b5eba5b9fa443880f923c"
       define_method(:install) do
         bin.install "tether"
       end
