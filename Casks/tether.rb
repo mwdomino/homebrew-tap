@@ -7,15 +7,14 @@ cask "tether" do
   desc "Menubar status app for the tether remote-browser tool"
   homepage "https://github.com/mwdomino/tether"
 
-  # Pulls in the `tether` CLI (host daemon + agent commands).
   depends_on formula: "mwdomino/tap/tether"
 
   app "Tether.app"
 
-  # Set up the host daemon to start at login (the GUI registers its own
-  # login item on first launch).
+  # Best-effort: set the host daemon to start at login if the CLI is present.
   postflight do
-    system_command "#{HOMEBREW_PREFIX}/bin/tether", args: ["install"]
+    cli = "#{HOMEBREW_PREFIX}/bin/tether"
+    system_command cli, args: ["install"] if File.exist?(cli)
   end
 
   uninstall quit: "io.github.mwdomino.tether"
