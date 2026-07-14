@@ -1,6 +1,6 @@
 cask "tether" do
-  version "0.5.3"
-  sha256 "c5f96ed3a4ea9d5f774c7b1be4ee148e3dc887a3ba03fec87de535027f11441a"
+  version "0.5.4"
+  sha256 "70a4501a8bdae62932738e7ffbbed5395cd6c5fea036865b033cf98511ceaa08"
 
   url "https://github.com/mwdomino/tether/releases/download/v#{version}/Tether_#{version}_darwin_arm64.zip"
   name "Tether"
